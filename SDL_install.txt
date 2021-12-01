@@ -1,0 +1,37 @@
+
+Home computer gcc version: 7.4.0
+sound: Line Out - Built-in Audio
+	(not HDMI/DisplayPort -GM22 High Definition Audio)
+	(not Digital Output (S/Pdif) - Built-in Audio)
+Try restarting; Alt-F2, type R, return
+Try updating software
+
+/home/mcb/Desktop/MV_Basecode> dpkg -l | grep sdl
+ii  libsdl2-2.0-0:amd64                             2.0.8+dfsg1-1ubuntu1.18.04.4                 amd64        Simple DirectMedia Layer
+ii  libsdl2-dev:amd64                               2.0.8+dfsg1-1ubuntu1.18.04.4                 amd64        Simple DirectMedia Layer development files
+
+
+	SDL - download .zip file and unzip
+	cd into SDL directory
+
+	> configure
+	> make
+	> sudo make install
+	> sudo ldconfig
+	> sudo apt-get install libsdl2-2.0
+	> sudo apt-get install libsdl2-dev
+
+(then force also reload and re-do SDL install, ugh)
+
+	> sudo alsa force-reload
+	> configure
+	> make
+	> sudo make install
+
+
+	> install libasound2-dev libpulse-dev
+	(no such file or directory first time..)
+
+// DON'T NEED THESE?
+//sudo apt-get install alsa-base pulseaudio
+//sudo alsa force-reload
